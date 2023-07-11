@@ -14,7 +14,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -31,8 +33,8 @@ class HomeDetailPage extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(MyTheme.bluishColor),
                         shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "Buy".text.make())
-                .wh(100, 50)
+                    child: "Add To Cart".text.make())
+                .wh(120, 50)
           ],
         ).p32(),
       ),
@@ -64,6 +66,16 @@ class HomeDetailPage extends StatelessWidget {
                               .xl
                               .make(),
                           10.heightBox,
+                          "ONE PIECE MONKEY D LUFFY ACTION FIGURE"
+                              .text
+                              .bold
+                              .xl
+                              .make()
+                              .p16(),
+                          "28 cm in height made of PVC plastic, great for One Piece fans and collectors"
+                              .text
+                              .textStyle(context.captionStyle)
+                              .make()
                         ],
                       ).py64(),
                     )))
