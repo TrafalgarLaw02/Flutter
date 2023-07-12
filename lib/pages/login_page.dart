@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_application_2/utlis/routes.dart";
+import "package:flutter_application_2/widgets/themes.dart";
+import "package:velocity_x/velocity_x.dart";
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -29,8 +31,15 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("One Piece"), centerTitle: true),
+      appBar: AppBar(
+        title: Text(
+          "One Piece",
+          style: TextStyle(color: Colors.red),
+        ),
+        centerTitle: true,
+      ),
       body: Material(
+        color: context.canvasColor,
         child: Form(
           key: _fromKey,
           child: Material(
