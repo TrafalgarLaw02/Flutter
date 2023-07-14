@@ -15,7 +15,7 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.getByPosition(index);
+        final catalog = CatalogModel.items[index];
         return InkWell(
             onTap: () => Navigator.push(
                 context,
@@ -58,20 +58,38 @@ class CatalogItem extends StatelessWidget {
               buttonPadding: EdgeInsets.zero,
               children: [
                 "\$${catalog.price}".text.xl.bold.make(),
-                ElevatedButton(
-                    onPressed: () {
-                      print("${catalog.name}");
-                    },
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                            context.theme.backgroundColor),
-                        shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "Add To Cart".text.make())
+                _AddtoCart()
               ],
             ).pOnly(right: 16.0)
           ],
         ))
       ],
     )).color(context.cardColor).roundedLg.square(200).make().py16();
+  }
+}
+
+class _AddtoCart extends StatefulWidget {
+  const _AddtoCart({
+    super.key,
+  });
+
+  @override
+  State<_AddtoCart> createState() => _AddtoCartState();
+}
+
+class _AddtoCartState extends State<_AddtoCart> {
+  bool isAdded = false;
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        onPressed: () {
+          isAdded = isAdded.toggle();
+          setState(() {});
+        },
+        style: ButtonStyle(
+            backgroundColor:
+                MaterialStateProperty.all(context.theme.backgroundColor),
+            shape: MaterialStateProperty.all(StadiumBorder())),
+        child: isAdded ? Icon(Icons.done) : "Add To Cart".text.make());
   }
 }

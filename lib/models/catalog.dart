@@ -1,17 +1,23 @@
+import 'package:flutter_application_2/models/catalog.dart';
+
 class CatalogModel {
+  static final catModel = CatalogModel._internal();
+  CatalogModel._internal();
+  factory CatalogModel() => catModel;
+
   static List<Item> items = [];
 
-  static getById(int id) =>
+  getById(int id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
 
-  static getByPosition(int pos) => items[pos];
+  getByPosition(int pos) => items[pos];
 }
 
 class Item {
-  final int? id;
+  final int id;
   final String name;
   final String desc;
-  final num? price;
+  final num price;
   final String? color;
   final String image;
 

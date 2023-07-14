@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         title: Text(
           "One Piece",
-          style: TextStyle(color: Colors.red),
+          style: TextStyle(color: context.theme.focusColor),
         ),
         centerTitle: true,
       ),
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     "One Piece is Real $name",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: context.theme.focusColor,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
