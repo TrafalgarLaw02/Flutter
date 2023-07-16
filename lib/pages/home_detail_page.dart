@@ -55,8 +55,8 @@ class HomeDetailPage extends StatelessWidget {
             Expanded(
                 child: VxArc(
                     height: 30.0,
-                    arcType: VxArcType.CONVEY,
-                    edge: VxEdge.TOP,
+                    arcType: VxArcType.convey,
+                    edge: VxEdge.top,
                     child: Container(
                       color: context.cardColor,
                       width: context.screenWidth,

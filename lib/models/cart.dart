@@ -6,7 +6,7 @@ class CartModel {
   factory CartModel() => cartModel;
 
   // catalog field
-  CatalogModel _catalog;
+  late CatalogModel _catalog;
 
   // Collection of IDs - store Ids of each item
   final List<int> _itemIds = [];
@@ -20,7 +20,8 @@ class CartModel {
   }
 
   // Get items in the cart
-  List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
+  List<Item> get items =>
+      _itemIds.map<Item>((id) => _catalog.getById(id)).toList();
 
   // Get total price
   num get totalPrice =>
@@ -30,11 +31,11 @@ class CartModel {
 
   void add(Item item) {
     _itemIds.add(item.id);
-  }
 
-  // Remove Item
+    // Remove Item
 
-  void remove(Item item) {
-    _itemIds.remove(item.id);
+    void remove(Item item) {
+      _itemIds.remove(item.id);
+    }
   }
 }

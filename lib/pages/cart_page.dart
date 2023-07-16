@@ -9,8 +9,8 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.canvasColor,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: "Cart".text.make(),
+        backgroundColor: context.theme.dividerColor,
+        title: "Cart".text.color(context.theme.backgroundColor).make(),
       ),
       body: Column(
         children: [
@@ -67,13 +67,12 @@ class __CartListState extends State<_CartList> {
     return ListView.builder(
       itemCount: _cart.items?.length,
       itemBuilder: (context, index) => ListTile(
-        leading: Icon(Icons.done),
-        trailing: IconButton(
-          icon: Icon(Icons.remove_circle_outline),
-          onPressed: () {},
-        ),
-        title: _cart.items[index].name.text.make(),
-      ),
+          leading: Icon(Icons.done),
+          trailing: IconButton(
+            icon: Icon(Icons.remove_circle_outline),
+            onPressed: () {},
+          ),
+          title: _cart.items[index].name.text.make()),
     );
   }
 }

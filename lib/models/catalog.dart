@@ -27,7 +27,8 @@ class Item {
       required this.desc,
       required this.price,
       required this.color,
-      required this.image});
+      required this.image})
+      : assert(Item != null);
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(

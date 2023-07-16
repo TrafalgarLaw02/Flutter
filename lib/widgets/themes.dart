@@ -10,6 +10,7 @@ class MyTheme {
       canvasColor: creamColor,
       backgroundColor: redishColor,
       focusColor: redishColor,
+      dividerColor: Colors.white,
       appBarTheme: AppBarTheme(
         color: Colors.white,
         elevation: 0.0,
@@ -25,6 +26,7 @@ class MyTheme {
       canvasColor: darkredishColor,
       backgroundColor: darkredishColor,
       focusColor: Colors.white,
+      dividerColor: Colors.white,
       appBarTheme: AppBarTheme(
         color: Colors.white,
         elevation: 0.0,
