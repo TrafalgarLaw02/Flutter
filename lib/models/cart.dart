@@ -31,11 +31,10 @@ class CartModel {
 
   void add(Item item) {
     _itemIds.add(item.id);
+  }
 
-    // Remove Item
-
-    void remove(Item item) {
-      _itemIds.remove(item.id);
-    }
+  // Remove Item
+  void remove(Item item) {
+    _itemIds.remove(item.id);
   }
 }
