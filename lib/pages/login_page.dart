@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   SizedBox(height: 20.0),
                   Text(
-                    "One Piece is Real $name",
+                    "One Piece is Real",
                     style: TextStyle(
                       color: context.theme.focusColor,
                       fontSize: 20,
