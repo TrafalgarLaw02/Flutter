@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
           email: email, password: password);
       user = userCredential.user;
     } on FirebaseAuthException catch (e) {
-      if (e.code == EmailAuthProvider.EMAIL_PASSWORD_SIGN_IN_METHOD) {
+      if (e.code == "user-not-found") {
         print("NO User found for that eamil");
       }
     }
