@@ -23,8 +23,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var name = "hi";
 
-  final url =
-      "https://jsoneditoronline.org/#left=cloud.ed9e767531ff4713b48d7568e1f3bd32";
+  // final url =
+  //     "https://jsoneditoronline.org/#left=cloud.ed9e767531ff4713b48d7568e1f3bd32";
 
   @override
   void initState() {

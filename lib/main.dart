@@ -3,12 +3,15 @@ import 'package:flutter_application_2/core/store.dart';
 import 'package:flutter_application_2/pages/cart_page.dart';
 import 'package:flutter_application_2/pages/home_page.dart';
 import 'package:flutter_application_2/pages/login_page.dart';
+import 'package:flutter_application_2/pages/signup_pge.dart';
 import 'package:flutter_application_2/utlis/routes.dart';
 import 'package:flutter_application_2/widgets/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  FirebaseApp firebaseApp = await (Firebase.initializeApp());
   runApp(VxState(store: MyStore(), child: MyApp()));
 }
 
@@ -29,6 +32,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.cartRoute: (context) => CartPage(),
+        MyRoutes.SignupRoute: (context) => SignupPage()
       },
     );
   }

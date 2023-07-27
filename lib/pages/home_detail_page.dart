@@ -59,21 +59,12 @@ class HomeDetailPage extends StatelessWidget {
                           catalog.name.text.xl4
                               .color(context.theme.focusColor)
                               .make(),
+                          10.heightBox,
+                          "${catalog.name} Action Figure".text.xl.make().p16(),
                           catalog.desc.text
                               .textStyle(context.captionStyle)
                               .xl
                               .make(),
-                          10.heightBox,
-                          "ONE PIECE MONKEY D LUFFY ACTION FIGURE"
-                              .text
-                              .bold
-                              .xl
-                              .make()
-                              .p16(),
-                          "28 cm in height made of PVC plastic, great for One Piece fans and collectors"
-                              .text
-                              .textStyle(context.captionStyle)
-                              .make()
                         ],
                       ).py64(),
                     )))
